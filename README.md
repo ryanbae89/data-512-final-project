@@ -85,14 +85,36 @@ This table contains name of the airline and the airline identifier code for all 
 | IATA_CODE   | string | Airline Identifier |
 | AIRLINE     | string | Airline's Name |
 
-### Airline Fleets
-
-Dataset under reivew...
+This dataset is released under [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/). 
 
 ### Twitter US Airlines Sentiment
 
+1. **tweets.csv**
 
+This table contains tweets from February 2015 that are about airlines and analyzed sentiment, as well as the reason for the negative sentiment.
+
+| Column | Datatype | Description |
+|-----|------------|----|
+| tweet_id | int | unique ID of the tweet |
+| airline_sentiment | string | sentiment of the tweet about the airline |
+| airline_sentiment_confidence | float | tweet sentiment confidence |
+| negativereason | string | reason for negative review |
+| negativereason_confidence | float | tweet negative review reason confidence |
+| airline | string | name of airline |
+| airline_sentiment_gold |  |
+| name | string | username of the tweeter |
+| negativereason_gold |  |
+| retweet_count | int | number of retweets |
+| text | string | text of the tweet |
+| tweet_coord | float | lat long location of the tweet |
+| tweet_created | timestamp | timestamp of the tweet |
+| tweet_location | string | city or state of the tweet's location |
+| user_timezone | string | timezone of the tweet |
+
+This dataset is released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
 ## Research Questions
+
+
 
 ## References
