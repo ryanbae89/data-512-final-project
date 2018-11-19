@@ -18,11 +18,11 @@ Second part of this project is an analysis of the Twitter sentiment of various a
 
 ## Data
 
-The data comes from several different sources. First is the flight delays data from US Department of Transportation. This dataset contains all the domestic flights in the United States with major carriers. It also contains tables for US airports and airlines. Second is the airline Twitter US airlines sentiment dataset, which contains tweets about airlines and the tweet's sentiment in February 2015.
+The data comes from several different sources. First is the flight delays data from US Department of Transportation. This dataset contains all the domestic flights in the United States with major carriers. It also contains tables for US airports and airlines. Second is the airline Twitter US airlines sentiment dataset, which contains tweets about airlines and the tweet's sentiment in February 2015. This dataset originally comes from data collection website called figure eight, and is listed on Kaggle as well.
 
 ### 2015 Flight Delays and Cancellations Data
 
-This dataset comes from [United States Department of Transportation](https://www.transportation.gov/) and is listed as a dataset on [Kaggle](https://www.kaggle.com/usdot/flight-delays). The dataset contains flight information of all the domestic flights from 2015 of large airlines. It also contains information about each airline and the airports in the United States. The 3 tables have the following schema:
+This dataset comes from [United States Department of Transportation's Bureau of Transportation Statistics](https://www.bts.gov/) and is listed as a dataset on [Kaggle](https://www.kaggle.com/usdot/flight-delays). The dataset contains flight information of all the domestic flights from 2015 of large airlines. It also contains information about each airline and the airports in the United States. The 3 tables have the following schema:
 
 1. **flights.csv**
 
@@ -85,9 +85,11 @@ This table contains name of the airline and the airline identifier code for all 
 | IATA_CODE   | string | Airline Identifier |
 | AIRLINE     | string | Airline's Name |
 
-This dataset is released under [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/). 
+This dataset is released under [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/).
 
-### Twitter US Airlines Sentiment
+### Twitter US Airlines Sentiment Data
+
+This dataset originally comes from website called [figure eight](https://www.figure-eight.com/data-for-everyone/) under Airline Twitter Sentiment, and is listed on [Kaggle](https://www.kaggle.com/crowdflower/twitter-airline-sentiment) as well.
 
 1. **tweets.csv**
 
@@ -113,8 +115,46 @@ This table contains tweets from February 2015 that are about airlines and analyz
 
 This dataset is released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
+### Data Limitations
+
+There are several limitations with the dataset. First, the tweets are only over a 1 month span, while the flights dataset is over an entire year. There are likely seasonal aspect to both the flights and tweets datasets that are not going to be captured with this analysis. There may also be a lagging effect of people's complaints about an airline on Twitter and their experiences with the airline, which may not be fully captured by this analysis either.
+
+In addition, some important characteristics about the airport are also missing. They can include things like number of flights and human traffic for an given airport, number of runways, etc that may all contribute to number of delayed flights. Finally, weather information at the time of each flight are also missing, which plays a significant role in determining the number of delays.
+
+Additional limitations are likely to pop up as the project progresses.
+
+## Analytical Methods
+
+The first portion of the analysis will contain both simple statistical visualization and classical machine learning analysis, trying to predict the most important features of a delayed flight. First is to perform simple aggregations to find average minutes of delays for each airline and airport and visualizing the results. As for the machine learning aspect of the project, there are several approaches including a simple binary or multi-class classification of a flight being delayed or not, and a regression of number of minutes delayed. Then the regression coefficients are to be analyzed to determine most important factors in flight delays.
+
+The second portion of the analysis will be simple statistical analysis to find the most negative and positive airlines from Twitter sentiments and comparing with most and least delayed airlines from 2015 flights for the month of February in 2015. This analysis may be further categorized to the reasoning of the negative sentiment to provide additional granularity filtering to the results.  
+
 ## Research Questions
 
+While there are many analysis of which airlines or airports are likely to have delays, they are not at the level of granularity that this project aims to provide. For example, the `flights.csv` table contains data about minutes of delays that is broken down into specific delay types. And comparison of Twitter sentiment for an airline with its delay performance at such granular level has not been done before.
 
+### Hypothesis
+
+This project is more of an open exploratory project, trying to find interesting patterns in both the delayed flights dataset and the Twitter dataset. There ism however, one hypothesis to be tested:
+
+> There is statistically significant correlation between an airline's proportion of delayed flights and it's Twitter sentiment.
+
+### Flight Delays Analysis
+
+1. Which airlines/airports have the most number of delays when adjusted for number of flights?
+2. Which cities and regions have the most number of delays when adjusted for number of flights?
+3. Are there any seasonal or temporal patters to the likeliness of delays?
+4. What is the breakdown of the delayed flights for different types of delays, and how do they differ for each airline and airport?
+5. What features of a flight are most associated with delayed flights?
+
+### Twitter Sentiment Analysis
+
+1. What airlines have the most negative/positive sentiments? What about in relations to specific reasons for negative sentiments?
+2. Do the above airlines match with most and least delayed airlines from the first analysis? What about when looking at specific subset of delays?
 
 ## References
+
+[1] [Flight delays and cancellation dataset on Kaggle](https://www.kaggle.com/usdot/flight-delays)
+[2] [Bureau of Transportation Statistics](https://www.bts.gov/)
+[3] [Twitter airline sentiment dataset on Kaggle](https://www.kaggle.com/crowdflower/twitter-airline-sentiment)
+[4] [Figure Eight website](https://www.figure-eight.com/data-for-everyone/)
