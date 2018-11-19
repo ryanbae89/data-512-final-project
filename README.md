@@ -155,6 +155,9 @@ This project is more of an open exploratory project, trying to find interesting 
 ## References
 
 [1] [Flight delays and cancellation dataset on Kaggle](https://www.kaggle.com/usdot/flight-delays)
+
 [2] [Bureau of Transportation Statistics](https://www.bts.gov/)
+
 [3] [Twitter airline sentiment dataset on Kaggle](https://www.kaggle.com/crowdflower/twitter-airline-sentiment)
+
 [4] [Figure Eight website](https://www.figure-eight.com/data-for-everyone/)
