@@ -2,6 +2,8 @@
 
 Author: Ryan Bae
 
+DATA 512 Fall 2018
+
 Due Date: December 5th, 2018
 
 ## Introduction
