@@ -30,6 +30,8 @@ This dataset comes from [United States Department of Transportation's Bureau of 
 
 This table contains 31 columns describing all domestic flights in the US by large carriers in 2015.
 
+*Note that this table is too large to be uploaded on Git, so a 5% sampled table called `flights_sampled.csv` is included in the repo instead.*
+
 | Column | Datatype | Description |
 |-----|------------|----|
 | YEAR | int | Year of the Flight Trip |
@@ -147,7 +149,6 @@ This project is more of an open exploratory project, trying to find interesting 
 2. Which cities and regions have the most number of delays when adjusted for number of flights?
 3. Are there any seasonal or temporal patters to the likeliness of delays?
 4. What is the breakdown of the delayed flights for different types of delays, and how do they differ for each airline and airport?
-5. What features of a flight are most associated with delayed flights?
 
 ### Twitter Sentiment Analysis
 
@@ -160,6 +161,10 @@ This project is more of an open exploratory project, trying to find interesting 
 
 [2] [Bureau of Transportation Statistics](https://www.bts.gov/)
 
-[3] [Twitter airline sentiment dataset on Kaggle](https://www.kaggle.com/crowdflower/twitter-airline-sentiment)
+[3] [Bureau of Transportation Statistics Airlines and Airports](https://www.bts.gov/topics/airlines-and-airports-0)
 
-[4] [Figure Eight website](https://www.figure-eight.com/data-for-everyone/)
+[4] [Twitter airline sentiment dataset on Kaggle](https://www.kaggle.com/crowdflower/twitter-airline-sentiment)
+
+[5] [Figure Eight website](https://www.figure-eight.com/data-for-everyone/)
+
+[6] University of Washington DATA 512 Fall 2018 Course Website, https://wiki.communitydata.cc/Human_Centered_Data_Science_(Fall_2018)
