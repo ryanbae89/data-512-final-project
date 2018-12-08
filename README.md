@@ -1,10 +1,10 @@
-# Final Project Plan - Flight Delays and Twitter Sentiment
+# Flight Delays and Twitter Sentiment
 
 Author: Ryan Bae
 
-University of Washington DATA 512 Fall 2018
+University of Washington DATA 512 Fall 2018 Final Project
 
-Due Date: December 5th, 2018
+Date: December 9th, 2018
 
 ## Introduction
 
