@@ -6,6 +6,10 @@ University of Washington DATA 512 Fall 2018 Final Project
 
 Date: December 9th, 2018
 
+### License Information
+
+All the code and analysis in this repo is considered open source, and covered under the [MIT license](https://opensource.org/licenses/MIT).
+
 ## Introduction
 
 Every day, more than a million people take to the skies to travel in the United States. Far removed from the golden age of flying in the 1960s, air travel today mainly conjures up memories of flight delays, rude customers, and long lies at the airport.
@@ -199,7 +203,7 @@ For this portion of the analysis, the following research questions are asked:
 
 Sentiment for each Tweet are already classified in the `Tweets.csv` dataset. Simple groupby aggregations are used to calculate sentiment for each airline using an industry popular metric called **Net Promoter Score**, or NPS. NPS is calculated using the following formula:
 
-$$NPS = \% \space positive Tweets - \% \space negative Tweets$$
+**NPS = % positive Tweets - % negative Tweets**
 
 NPS is not a perfect way of aggregating sentiments (it usually relies on a 5 point scale that is not linear). But because of the human-centered considerations of the non-technical audience, it was chosen for it's simplicity and ability to quantify sentiment in a single number.  
 
